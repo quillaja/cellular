@@ -1,6 +1,14 @@
-package main
+package common
 
-import "image/color"
+import (
+	"image/color"
+
+	"github.com/faiface/pixel/imdraw"
+)
+
+type Entity interface {
+	GetVisual() imdraw.IMDraw
+}
 
 // MakeColorRamp produces a list of colors by interpolating
 // color values between a series of stops.
